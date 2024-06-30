@@ -1,0 +1,20 @@
+.title {
+  --title-color: var(--blue-100);
+
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: var(--title-color);
+
+  @include media-min ($md) {
+    font-size: 40px;
+  }
+
+  @include media-min ($lg) {
+    font-size: 50px;
+  }
+
+  & > span {
+    color: #d93f39;
+  }
+}

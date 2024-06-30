@@ -1,0 +1,26 @@
+.products {
+  position: relative;
+  background-color: var(--black-10);
+  padding: 150px 0 250px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(230, 230, 230, 0) 0%, #e6e6e6 30.23%, #e6e6e6 100%);
+  }
+
+  &__title {
+    position: sticky;
+    top: 150px;
+    margin-bottom: 50px;
+
+    @include media-min ($md) {
+      margin-bottom: 150px;
+    }
+  }
+
+}

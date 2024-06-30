@@ -1,0 +1,30 @@
+.header {
+  position: absolute;
+  padding: 20px 0;
+  margin-bottom: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  background-color: var(--white);
+
+  &.is-sticky {
+    position: fixed;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+
+    @include media-min ($xl) {
+      justify-content: center;
+    }
+  }
+
+  &__left {
+    display: inline-flex;
+  }
+}

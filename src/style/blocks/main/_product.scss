@@ -1,0 +1,83 @@
+.product {
+  --title-color: var(--blue-100);
+  --title-size: 18px;
+
+  border-top: 1px solid var(--black-20);
+  border-left: 1px solid var(--black-20);
+  padding: 10px 0 0 15px;
+  transition: all .2s ease-in-out;
+
+  @include media-min ($md) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &:hover {
+    --title-color: var(--red-100);
+    --title-size: 25px;
+
+    padding-right: 35px;
+    border-color: var(--red-50);
+  }
+
+  &.active {
+    --title-color: var(--red-100);
+    --title-size: 25px;
+
+    padding-right: 35px;
+    border-color: var(--red-50);
+  }
+
+  &__title {
+    margin: 0;
+    padding-top: 10px;
+    font-size: var(--title-size);
+    text-transform: uppercase;
+    color: var(--title-color);
+    margin-bottom: 5px;
+    transition: all .2s ease-in-out;
+
+  }
+
+  &__info {
+    max-width: 250px;
+  }
+
+  &__cost {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed var(--black-30);
+  }
+
+  &__btn {
+    font-size: 18px;
+    padding: 3.5px 0;
+  }
+
+}
+
+
+.product-slider {
+  max-width: 300px;
+  height: 200px;
+
+  & .swiper-wrapper {}
+
+  &__slide {
+    width: 200px;
+    height: 200px;
+
+    &.swiper-slide-active {}
+  }
+}

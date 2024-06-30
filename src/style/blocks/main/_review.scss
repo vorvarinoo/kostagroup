@@ -1,0 +1,72 @@
+.review {
+  border-top: 1px solid var(--black-20);
+
+  @include media-min ($md) {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    padding-left: 120px;
+  }
+
+  @include media-min ($xl) {
+    gap: 100px;
+    padding-left: 270px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $title-font, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--blue-100);
+    margin-bottom: 20px;
+
+    @include media-min ($md) {
+      font-size: 20px;
+    }
+  }
+
+  &__top {
+    padding-top: 15px;
+
+    @include media-min ($md) {
+      border-left: 1px solid var(--black-20);
+      padding-left: 30px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--black-50);
+    margin-bottom: 35px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__photo {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media-min ($md) {
+      margin-top: 15px;
+    }
+  }
+
+  & .slider-controls-btn {
+    @include media-min ($md) {
+      position: absolute;
+      top: 15px;
+      left: 0;
+    }
+  }
+}

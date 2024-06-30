@@ -1,0 +1,49 @@
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include media-min ($md) {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  & > * {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include media-min ($md) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @include media-min ($lg) {
+      margin-bottom: 0;
+      flex: 0 0 33%;
+      max-width: 33%;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--black-50);
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__link {
+    font-family: $title-font, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+}

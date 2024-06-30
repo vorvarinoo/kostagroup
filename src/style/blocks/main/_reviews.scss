@@ -1,0 +1,17 @@
+.reviews {
+  background: var(--black-10);
+  padding: 50px 0 250px;
+
+  @include media-min ($md) {
+    padding: 150px 0 350px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+}

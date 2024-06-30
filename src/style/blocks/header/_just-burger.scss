@@ -1,0 +1,77 @@
+.just-burger {
+  --burger-animation-time: .3s;
+
+  position: relative;
+  width: 50px;
+  height: 20px;
+
+  &__line {
+    position: absolute;
+    left: 0;
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: var(--blue-100);
+    transition: all var(--burger-animation-time) ease-in-out;
+
+    &--top {
+      top: 0;
+      transform-origin: top left;
+
+    }
+
+    &--middle {
+      width: 80%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--bottom {
+      bottom: 0;
+      transform-origin: bottom left;
+
+    }
+  }
+
+  // display: flex;
+  // width: 32px;
+  // padding: var(--burger-offset, 0);
+  // cursor: pointer;
+  // color: var(--burger-color, var(--blue-100));
+  // border: none;
+  // background-color: transparent;
+
+  // &__icon {
+  //   width: 100%;
+  //   user-select: none;
+  //   transform: var(--burger-position);
+  //   transition: transform var(--burger-animation-time, 0.4s);
+  //   pointer-events: none;
+  // }
+
+  // &__line {
+  //   transition: stroke-dasharray var(--burger-animation-time, 0.4s), stroke-dashoffset var(--burger-animation-time, 0.4s);
+  //   fill: none;
+  //   stroke: currentColor;
+  //   stroke-width: var(--burger-weight, 8);
+  //   stroke-linecap: square;
+
+  //   &--top {
+  //     stroke-dasharray: 36px 145px;
+  //     stroke-dashoffset: var(--burger-dashoffset);
+  //   }
+
+  //   &--middle {
+  //     stroke-dasharray: 36px 145px;
+  //     transform: var(--burger-middle-position);
+  //     transform-origin: 50%;
+  //     transition: transform var(--burger-animation-time, 0.4s);
+  //   }
+
+  //   &--bottom {
+  //     stroke-dasharray: 36px 145px;
+  //     stroke-dashoffset: var(--burger-dashoffset);
+  //     transform-origin: 50%;
+  //   }
+  // }
+}

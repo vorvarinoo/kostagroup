@@ -1,0 +1,12 @@
+.phone {
+
+  text-transform: uppercase;
+  font-family: $title-font, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  display: inline-flex;
+  transition: .3s;
+
+  @include media-min ($md) {
+    font-size: 20px;
+  }
+}

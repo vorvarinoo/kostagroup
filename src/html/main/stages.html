@@ -1,0 +1,44 @@
+<section class="stages">
+  <div class="container">
+    @include('../common/request-form.html', {id:'request-form-stages'} )
+
+    <h2 class="d-none">Этапы работ</h2>
+    <div class="stages__title">
+      <img src="img/img_title-stages.png"
+           alt="Этапы работ">
+    </div>
+
+    <ul class="list-reset stages__list">
+      <li class="stages__item stage"
+          style="--img-bg: url('../img/img-bg_stage-1.png');">
+
+        <div class="stage__title">
+          <h3>
+            обсуждается образец, после чего мы&nbsp;изготавливаем готовый экземпляр
+          </h3>
+        </div>
+
+      </li>
+      <li class="stages__item stage"
+          style="--img-bg: url('../img/img-bg_stage-2.png'); ">
+
+        <div class="stage__title">
+          <h3>
+            согласовываем объем сроки и&nbsp;стоимость
+          </h3>
+        </div>
+
+      </li>
+      <li class="stages__item stage"
+          style="--img-bg: url('../img/img-bg_stage-3.png');">
+
+        <div class="stage__title">
+          <h3>
+            запускаем<br> в&nbsp;производство
+          </h3>
+        </div>
+
+      </li>
+    </ul>
+  </div>
+</section>

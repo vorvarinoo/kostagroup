@@ -1,0 +1,65 @@
+.stages {
+  position: relative;
+
+  @include media-min ($md) {
+    padding-top: 50px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+
+    @include media-min ($xl) {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 50.43%);
+    }
+  }
+
+  &__title {
+    position: sticky;
+    top: 100px;
+  }
+
+  &__list {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 265px;
+    counter-reset: num;
+    margin-top: 200px;
+    padding-bottom: 50px;
+    padding-bottom: 150px;
+
+    @include media-min ($md) {
+      margin-top: 150px;
+      gap: 30px;
+    }
+
+    @include media-min ($xl) {
+      flex-direction: row;
+    }
+
+    & li {
+      @include media-min ($md) {
+        &:nth-child(3n+1) {
+          align-self: flex-start;
+        }
+
+        &:nth-child(3n+2) {
+          align-self: center;
+        }
+
+        &:nth-child(3n) {
+          align-self: end;
+        }
+      }
+    }
+  }
+
+}

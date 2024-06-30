@@ -1,0 +1,86 @@
+.form-label {
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--black-30);
+}
+
+.form-input {
+  font-family: $title-font, Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: var(--input-offset, var(--input-offset-vertical, 10.5px) var(--input-offset-horizontal, 20px));
+  width: 100%;
+  color: var(--main-text, inherit);
+  background-color: var(--main-bg, inherit);
+  border: none;
+  border-bottom: 1px solid var(--border, currentColor);
+  appearance: none;
+  outline: none;
+
+  &.is-invalid {
+    border-color: var(--error, var(--accent));
+  }
+
+  &--area {
+    resize: none;
+    height: var(--input-height, 6em);
+  }
+
+  &::placeholder {
+    opacity: 0.2;
+    color: inherit;
+  }
+
+  &:focus-visible {
+    --border: var(--white);
+  }
+}
+
+.form-checkbox {
+
+  & > input {
+    @include visually-hidden;
+
+    &:focus-visible + span::before {
+      box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 2px var(--accent);
+    }
+
+    &:checked + span::before {
+      background-image: var(--checbox-ticket, url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 2.84555L4.11111 5.9001L9 1.1001' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"));
+      background-size: 8px 5px;
+    }
+  }
+
+  & > span {
+    display: flex;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--black-30);
+
+    user-select: none;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      flex: 0 0 auto;
+      border: 1px solid var(--border, var(--accent));
+      margin-right: 10px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+  }
+
+  & a {
+    color: inherit;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: var(--accent);
+      border-bottom: 1px var(--accent) solid;
+    }
+  }
+}
