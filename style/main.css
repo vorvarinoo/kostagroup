@@ -233,7 +233,7 @@ input[type=checkbox].visually-hidden {
     color: var(--red-100);
   }
 }
-@media (any-hover: hover) and (any-hover: none) {
+@media (any-hover: none) {
   .contact-hover:active,
   .nav__link:active,
   .contact-info__link:active,
