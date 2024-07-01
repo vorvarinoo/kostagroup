@@ -46,9 +46,18 @@
   transition: all .3s ease-in-out;
   cursor: pointer;
 
-  &:hover {
-    background-color: var(--red-100);
-    color: var(--white);
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--red-100);
+      color: var(--white);
+    }
+  }
+
+  @media (any-hover: none) {
+    &:active {
+      background-color: var(--red-100);
+      color: var(--white);
+    }
   }
 }
 

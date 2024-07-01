@@ -3,21 +3,22 @@
   border-image: fill 0 linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
   background-repeat: no-repeat;
   background-size: auto 100%;
-  padding: 50px 15px;
+  padding: 70px 15px 50px;
   position: relative;
 
 
   @include media-min ($md) {
-    padding: 50px 50px 60px;
-  }
-
-  @include media-min ($lg) {
-    background-size: auto auto;
+    padding: 70px 50px 60px;
   }
 
   &--position {
     position: relative;
     top: -150px;
+
+    @include media-min ($md) {
+      margin-bottom: 50px;
+    }
+
   }
 
   &__title {

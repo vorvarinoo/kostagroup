@@ -41,7 +41,6 @@ const initStickyHeader = ( node, target ) => {
 };
 
 
-
 export const initHeaderMenu = () => {
 
   const contentNode = document.querySelector( '.site__content' );
@@ -50,6 +49,8 @@ export const initHeaderMenu = () => {
 
   const modalNode = document.querySelector( '.header-modal' );
   const modalTriggerNode = document.querySelector( '.header .just-burger' );
+
+  const listNavLink = document.querySelectorAll( '.nav--sm .nav__link' );
 
   if ( !modalNode || !modalTriggerNode ) return;
 
@@ -73,6 +74,13 @@ export const initHeaderMenu = () => {
     modalTriggerNode.classList.remove( 'is-expanded' );
     document.addEventListener( 'keydown', onEscKeydown );
   }
+
+  listNavLink.forEach( ( elem ) => {
+    elem.addEventListener( 'click', () => {
+
+      setTimeout( closeModal, 200 );
+    } );
+  } );
 
   initStickyHeader( headerNode, headerTopNode );
   initStickyHeader( contentNode, headerTopNode );

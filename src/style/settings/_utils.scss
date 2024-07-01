@@ -44,7 +44,6 @@ input[type="checkbox"].visually-hidden {
 
 .is-expanded {
 
-
   & .just-burger__line {
     background-color: var(--white);
   }
@@ -74,26 +73,24 @@ input[type="checkbox"].visually-hidden {
   @include custom-scroll;
 }
 
-.scroll-indent {
-
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    /* равен по модулю толщине border */
-    left: 0;
-    right: 0;
-    border-top: 55px solid transparent;
-    margin-top: -55px;
-  }
-
-}
-
-
-
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 10px;
+}
+
+.contact-hover {
+  transition: .3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--red-100);
+    }
+  }
+
+  @media (any-hover: none) {
+    &:active {
+      color: var(--red-100);
+    }
+  }
 }

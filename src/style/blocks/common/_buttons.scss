@@ -14,22 +14,21 @@
     transition: inherit;
   }
 
-  &:hover {
-    & svg {
-      transform: rotate(90deg);
+  @media (any-hover: hover) {
+    &:hover {
+      & svg {
+        transform: rotate(90deg);
+      }
     }
   }
 
-  // & svg {
-  //   margin-right: 12px;
-  // }
-
-  // &--icon-reverse {
-  //   & svg {
-  //     margin-right: 0;
-  //     margin-left: 12px;
-  //   }
-  // }
+  @media (any-hover: none) {
+    &:hover {
+      & svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
 
   @include media-min ($md) {
     font-size: 20px;
@@ -65,11 +64,22 @@
       left: 0;
     }
 
-    &:hover {
-      color: var(--white);
-      padding-left: 20px;
-      padding-right: 20px;
-      background-color: var(--red-100);
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--white);
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: var(--red-100);
+      }
+    }
+
+    @media (any-hover: none) {
+      &:hover {
+        color: var(--white);
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: var(--red-100);
+      }
     }
   }
 
@@ -78,8 +88,16 @@
     color: var(--white);
     background-color: rgba(158, 36, 31, 0.7);
 
-    &:hover {
-      background-color: rgba(158, 36, 31, 1);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(158, 36, 31, 1);
+      }
+    }
+
+    @media (any-hover: none) {
+      &:hover {
+        background-color: rgba(158, 36, 31, 1);
+      }
     }
   }
 }

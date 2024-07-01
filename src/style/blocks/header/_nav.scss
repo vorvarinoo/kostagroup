@@ -51,8 +51,6 @@
       color: var(--blue-100);
     }
 
-    &:hover {
-      color: var(--red-100)
-    }
+    @extend .contact-hover;
   }
 }

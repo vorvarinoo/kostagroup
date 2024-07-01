@@ -9,40 +9,42 @@
   display: flex;
   justify-content: space-between;
 
-  &:hover {
-    --title-color: var(--red-100);
+  @media (any-hover: hover) {
+    &:hover {
+      --title-color: var(--red-100);
 
-    padding-right: 35px;
-    border-color: var(--red-50);
+      padding-right: 35px;
+      border-color: var(--red-50);
 
-    & .product__title {
-      font-size: 25px;
+      & .product__title {
+        font-size: 25px;
 
-      @include media-min ($md) {
-        font-size: 30px;
+        @include media-min ($md) {
+          font-size: 30px;
+        }
+
+        & svg {
+          opacity: 1;
+          @include anim(fade, .1s);
+        }
       }
 
-      & svg {
-        opacity: 1;
-        @include anim(fade, .1s);
+      & .product__img {
+
+        & > div {
+          height: 300px;
+          width: 300px;
+          position: absolute;
+          z-index: 3;
+          top: 0;
+          right: 0;
+          border: 1px solid var(--black-30);
+          transition: .3s;
+        }
       }
-    }
-
-    & .product__img {
-
-      & > div {
-        height: 300px;
-        width: 300px;
-        position: absolute;
-        z-index: 3;
-        top: 0;
-        right: 0;
-        border: 1px solid var(--black-30);
-        transition: .3s;
-      }
-
     }
   }
+
 
   &.active {
     padding-right: 35px;
@@ -58,6 +60,7 @@
 
       padding-top: 0;
       font-size: 25px;
+      transition: .3s;
 
       @include media-min ($md) {
         font-size: 30px;
@@ -199,12 +202,22 @@
     cursor: pointer;
     transition: .3s;
 
-
-    &:hover {
-      color: var(--white);
-      background-color: var(--red-100);
-      border: none;
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--white);
+        background-color: var(--red-100);
+        border: none;
+      }
     }
+
+    @media (any-hover: none) {
+      &:active {
+        color: var(--white);
+        background-color: var(--red-100);
+        border: none;
+      }
+    }
+
   }
 }
 
@@ -276,14 +289,19 @@
       }
     }
 
-    &:hover {
-      cursor: pointer;
+    @media (any-hover: hover) {
+      opacity: 1;
 
-      &::after {
-        opacity: 1;
+      &:hover {
+        cursor: pointer;
+
+        &::after {
+          opacity: 1;
+        }
       }
     }
   }
+
 
   &__btns {
     margin-top: 10px;

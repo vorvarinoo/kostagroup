@@ -5,8 +5,11 @@
   font-size: 18px;
   display: inline-flex;
   transition: .3s;
+  @extend .contact-hover;
 
   @include media-min ($md) {
     font-size: 20px;
   }
+
+
 }
