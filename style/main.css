@@ -552,9 +552,11 @@ strong {
 .btn svg {
   transition: inherit;
 }
-.btn:hover svg {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+@media (any-hover: hover) {
+  .btn:hover svg {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
 }
 @media (min-width: 768px) {
   .btn {
@@ -593,13 +595,15 @@ strong {
   bottom: 0;
   left: 0;
 }
-.btn--primary:hover {
-  padding-right: 20px;
-  padding-left: 20px;
+@media (any-hover: hover) {
+  .btn--primary:hover {
+    padding-right: 20px;
+    padding-left: 20px;
 
-  color: var(--white);
+    color: var(--white);
 
-  background-color: var(--red-100);
+    background-color: var(--red-100);
+  }
 }
 .btn--secondary {
   justify-content: center;
@@ -608,8 +612,10 @@ strong {
 
   background-color: rgba(158, 36, 31, 0.7);
 }
-.btn--secondary:hover {
-  background-color: rgb(158, 36, 31);
+@media (any-hover: hover) {
+  .btn--secondary:hover {
+    background-color: rgb(158, 36, 31);
+  }
 }
 
 .form-label {
@@ -890,8 +896,16 @@ strong {
 
   transition: all 0.3s ease-in-out;
 }
-.slider-btn-prev:hover,
-.slider-btn-next:hover {
+@media (any-hover: hover) {
+  .slider-btn-prev:hover,
+  .slider-btn-next:hover {
+    color: var(--white);
+
+    background-color: var(--red-100);
+  }
+}
+.slider-btn-prev:active,
+.slider-btn-next:active {
   color: var(--white);
 
   background-color: var(--red-100);
@@ -1583,6 +1597,8 @@ strong {
   padding-top: 0;
 
   font-size: 25px;
+
+  transition: 0.8s;
 
   --title-color: var(--blue-100);
 }
