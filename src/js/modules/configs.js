@@ -1,15 +1,33 @@
 const sliderConfig = {
   default: {
     slidesPerView: 1,
-
     watchSlidesProgress: true,
   },
 
   product: {
     initialSlide: 1,
-    slidesPerView: 'auto',
-    slidesOffsetBefore: 100,
     loop: true,
+    slidesOffsetBefore: 100,
+    breakpoints: {
+      320: {
+        slidesPerView: 'auto',
+
+      },
+
+      768: {
+        slidesPerView: 1,
+        slidesOffsetBefore: 0,
+      },
+
+      1200: {
+        slidesPerView: 'auto',
+        slidesOffsetBefore: 220,
+      }
+    },
+    navigation: {
+      nextEl: '.slider-btn-next',
+      prevEl: '.slider-btn-prev',
+    },
   },
 
   reviews: {

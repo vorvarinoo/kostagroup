@@ -8,10 +8,9 @@ import {
 
 const initSliders = () => {
   initSlider( '.main-first', sliderConfig );
-  initSlider( '.product-slider', sliderConfig.product );
+  initSlider( '.product-slider .swiper', sliderConfig.product );
   initSlider( '.reviews-slider', sliderConfig.reviews );
 };
-
 
 
 export {

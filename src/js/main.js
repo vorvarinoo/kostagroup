@@ -22,6 +22,10 @@ import {
   initScrollTop,
 } from './modules/scroll-top.js';
 
+import {
+  products,
+} from './modules/product.js';
+
 document.addEventListener( 'DOMContentLoaded', () => {
   iosVhFix();
 
@@ -31,5 +35,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
     initSliders();
     initScrollTop();
     initHeaderMenu();
+    products();
   } );
 } );

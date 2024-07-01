@@ -1,7 +1,7 @@
 .hero {
   padding-top: 240px;
 
-  @include media-min ($xl) {
+  @include media-min ($md) {
     padding-top: 150px;
   }
 

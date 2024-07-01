@@ -30,7 +30,6 @@
   display: inline-flex;
   gap: 5px;
   pointer-events: auto;
-  overflow: hidden;
 }
 
 .slider-btn-prev,
@@ -45,6 +44,7 @@
   border: 1px solid var(--red-100);
   color: var(--red-100);
   transition: all .3s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     background-color: var(--red-100);
