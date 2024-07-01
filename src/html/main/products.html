@@ -1,9 +1,11 @@
-<section class="products">
+<section id="products"
+         class="products ">
   <div class="container">
     <div class="products__title">
       <img src="img/img_title-products.png"
            alt="">
     </div>
+
     <div class="category">
       <div class="category__descr">
         <h3 class="category__title">опоры для <span>столов</span></h3>
@@ -12,89 +14,114 @@
 
       <ul class="list-reset category__list">
         <li class="category__item">
-          <article class="product">
-            <div class="flex-grow-1">
-              <h4 class="product__title">подстолье 1</h4>
-              <div class="product__info">
-                <div class="product__cost">мин. заказ - 20шт</div>
-                <ul class="list-reset product__list">
-                  <li class="product__item">
-                    <div class="product__item-name">Размеры:</div>
-                    <div class="product__item-value">1300*700*450 мм</div>
-                  </li>
-                  <li class="product__item">
-                    <div class="product__item-name">Вес:</div>
-                    <div class="product__item-value">120 кг</div>
-                  </li>
-                  <li class="product__item">
-                    <div class="product__item-name">Покрытие:</div>
-                    <div class="product__item-value">Матовое</div>
-                  </li>
-                </ul>
-                <button class="btn btn--primary product__btn">Заказать
-                  <svg width="13"
-                       height="13"
-                       aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon_btn-arrow"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="product__img">
-              <img src="img/img_product-1.png"
-                   alt="опоры для столов">
-            </div>
-            <div class="product-slider">
-              <div class="swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide product-slider__slide">
-                    <img src="img/img_product-2.png"
-                         alt="Опоры для столов">
-                  </div>
-                  <div class="swiper-slide product-slider__slide">
-                    <img src="img/img_product-1.png"
-                         alt="Опоры для столов">
-                  </div>
-                  <div class="swiper-slide product-slider__slide">
-                    <img src="img/img_product-2.png"
-                         alt="Опоры для столов">
-                  </div>
-                  <div class="swiper-slide product-slider__slide">
-                    <img src="img/img_product-1.png"
-                         alt="Опоры для столов">
-                  </div>
-                </div>
-
-                <div class="slider-controls-btn product-slider__btns">
-                  <div class="slider-btn-prev">
-                    <svg width="23"
-                         height="15"
-                         aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#icon_slider-btn-arrow"></use>
-                    </svg>
-                  </div>
-                  <div class="slider-btn-next">
-                    <svg width="22"
-                         height="16"
-                         aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#icon_slider-btn-arrow"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product__close">
-              <svg width="13"
-                   height="13"
-                   aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-close"></use>
-              </svg>
-            </div>
-          </article>
-
+          @include('product.html',
+          {
+          name:'подстолье 1',
+          img:'img/products/tables/1/img_product-1.png'
+          })
+        </li>
+        <li class="category__item">
+          @include('product.html',
+          {
+          name:'подстолье 2',
+          img:'img/products/tables/2/img_product.png'
+          })
+        </li>
+        <li class="category__item">
+          @include('product.html',
+          {
+          name:'подстолье 3',
+          img:'img/products/tables/3/img_product.png'
+          })
+        </li>
+        <li class="category__item">
+          @include('product.html',
+          {
+          name:'подстолье 4',
+          img:'img/products/tables/4/img_product.png'
+          })
         </li>
       </ul>
     </div>
+
+    <div class="category">
+      <div class="category__descr">
+        <h3 class="category__title">опоры для <span>стульев</span></h3>
+        <p class="category__text">Опоры разборные и удобные в транспортировке Опоры разборные и удобные в транспортировке </p>
+      </div>
+
+      <ul class="list-reset category__list">
+        <li class="category__item">
+          @include('product.html',
+          {
+          name:'подстулье 1',
+          img:'img/products/chairs/1/img_product.png'
+          })
+        </li>
+        <li class="category__item">
+          @include('product.html',
+          {
+          name:'подстулье 2',
+          img:'img/products/chairs/1/img_product.png'
+          })
+        </li>
+        <li class="category__item">
+          @include('product.html',
+          {
+          name:'подстулье 3',
+          img:'img/products/chairs/1/img_product.png'
+          })
+        </li>
+
+
+      </ul>
+    </div>
+
+    <div class="category">
+      <div class="category__descr">
+        <h3 class="category__title">опоры для <span>Мебели</span></h3>
+        <p class="category__text">Опоры разборные и удобные в транспортировке Опоры разборные и удобные в транспортировке </p>
+      </div>
+
+      <ul class="list-reset category__list">
+        <li class="category__item">
+          @include('product.html',
+          {
+          name:'опора лофт для шкафа',
+          img:'img/products/furniture/1/img_product.png'
+          })
+        </li>
+        <li class="category__item">
+          @include('product.html',
+          {
+          name:'ортопедическое основание',
+          img:'img/products/furniture/2/img_product.png'
+          })
+        </li>
+        <li class="category__item">
+          @include('product.html',
+          {
+          name:'механизм подъема кровати',
+          img:'img/products/furniture/3/img_product.png'
+          })
+        </li>
+        <li class="category__item">
+          @include('product.html',
+          {
+          name:'держатели для полок',
+          img:'img/products/furniture/4/img_product.png'
+          })
+        </li>
+        <li class="category__item">
+          @include('product.html',
+          {
+          name:'опора лайт',
+          img:'img/products/furniture/5/img_product.png'
+          })
+        </li>
+
+      </ul>
+    </div>
+
   </div>
 </section>

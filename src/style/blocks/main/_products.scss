@@ -1,7 +1,14 @@
 .products {
   position: relative;
-  background-color: var(--black-10);
   padding: 150px 0 250px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: var(--black-10);
+    inset: 0;
+    z-index: -1;
+  }
 
   &::after {
     content: '';
@@ -11,12 +18,15 @@
     left: 0;
     right: 0;
     background: linear-gradient(180deg, rgba(230, 230, 230, 0) 0%, #e6e6e6 30.23%, #e6e6e6 100%);
+    z-index: -1;
   }
+
 
   &__title {
     position: sticky;
     top: 150px;
     margin-bottom: 50px;
+    z-index: -1;
 
     @include media-min ($md) {
       margin-bottom: 150px;

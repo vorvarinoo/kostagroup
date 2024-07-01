@@ -1,55 +1,75 @@
 .product {
   --title-color: var(--blue-100);
-  --title-size: 18px;
 
   position: relative;
   border-top: 1px solid var(--black-20);
   border-left: 1px solid var(--black-20);
   padding: 10px 0 10px 15px;
   transition: all .2s ease-in-out;
-
-  @include media-min ($md) {
-    display: flex;
-    justify-content: space-between;
-  }
+  display: flex;
+  justify-content: space-between;
 
   &:hover {
     --title-color: var(--red-100);
-    --title-size: 25px;
-    --img-size: 300px;
 
     padding-right: 35px;
     border-color: var(--red-50);
 
-    @include media-min ($md) {
-      --title-size: 30px;
+    & .product__title {
+      font-size: 25px;
+
+      @include media-min ($md) {
+        font-size: 30px;
+      }
+
+      & svg {
+        opacity: 1;
+        @include anim(fade, .1s);
+      }
     }
 
     & .product__img {
-      width: 300px;
-      height: 300px;
-      box-shadow: 0 20px 100px 0 var(--black-10);
-      border: 1px solid var(--black-30);
-      transition: .3s;
+
+      & > div {
+        height: 300px;
+        width: 300px;
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        right: 0;
+        border: 1px solid var(--black-30);
+        transition: .3s;
+      }
+
     }
   }
 
   &.active {
-    --title-color: var(--red-100);
-    --title-size: 25px;
-
     padding-right: 35px;
     border-color: var(--red-50);
+    flex-direction: column;
 
     @include media-min ($md) {
-      --title-size: 30px;
+      flex-direction: row;
     }
 
     & .product__title {
+      --title-color: var(--blue-100);
+
       padding-top: 0;
+      font-size: 25px;
+
+      @include media-min ($md) {
+        font-size: 30px;
+      }
+
+      & svg {
+        display: none;
+      }
+
     }
 
-    & .product__info {
+    & .product__descr {
       display: block;
     }
 
@@ -59,6 +79,31 @@
 
     & .product-slider {
       display: inline-block;
+      align-self: flex-start;
+
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 200px;
+        background-color: var(--black-10);
+        opacity: 1;
+        pointer-events: none;
+        @include anim(reverse-fade, .6s);
+
+        @include media-min ($md) {
+          content: none;
+        }
+
+        @include media-min ($xl) {
+          content: '';
+          width: 230px;
+          height: 100%;
+        }
+      }
     }
 
     & .product__close {
@@ -66,18 +111,28 @@
     }
   }
 
+
   &__title {
     margin: 0;
     padding-top: 10px;
-    font-size: var(--title-size);
+    font-size: 18px;
     text-transform: uppercase;
     color: var(--title-color);
+    margin-right: 20px;
     margin-bottom: 5px;
     transition: all .2s ease-in-out;
 
+    @include media-min ($md) {
+      font-size: 20px;
+    }
+
+    & svg {
+      margin-left: 15px;
+      opacity: 0;
+    }
   }
 
-  &__info {
+  &__descr {
     max-width: 250px;
     display: none;
   }
@@ -108,13 +163,29 @@
   }
 
   &__img {
-    width: 100px;
+    position: relative;
     height: 100px;
-    transition: .3s;
+
+    & div {
+      position: relative;
+      z-index: 2;
+      background-color: var(--black-10);
+      box-shadow: 0 20px 100px 0 var(--black-10);
+      width: 100px;
+      height: 100px;
+      transition: .3s;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__close {
     position: absolute;
+    z-index: 2;
+    pointer-events: auto;
     top: 10px;
     right: 0;
     width: 30px;
@@ -127,6 +198,7 @@
     border-radius: 100%;
     cursor: pointer;
     transition: .3s;
+
 
     &:hover {
       color: var(--white);

@@ -3,20 +3,13 @@ const products = document.querySelectorAll( '.product' );
 products.forEach( ( elem ) => {
   const productBtnClose = elem.querySelector( '.product__close' );
 
-  const addClass = () => {
-    elem.classList.add( 'active' );
-  };
-  const removeClass = () => {
-    elem.classList.remove( 'active' );
-  };
-
   elem.addEventListener( 'click', () => {
-    addClass();
+    elem.classList.add( 'active' );
   } );
 
-  productBtnClose.addEventListener( 'click', () => {
-    removeClass();
-
+  productBtnClose.addEventListener( 'click', ( event ) => {
+    event.stopPropagation();
+    elem.classList.remove( 'active' );
   } );
 
 } );

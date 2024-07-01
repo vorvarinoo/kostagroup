@@ -8,7 +8,9 @@ import {
 
 const initSliders = () => {
   initSlider( '.main-first', sliderConfig );
-  initSlider( '.product-slider .swiper', sliderConfig.product );
+  document.querySelectorAll( '.product-slider .swiper' ).forEach( slider => {
+    initSlider( slider, sliderConfig.product );
+  } );
   initSlider( '.reviews-slider', sliderConfig.reviews );
 };
 

@@ -32,6 +32,7 @@ const sliderConfig = {
 
   reviews: {
     slidesPerView: 1,
+    spaceBetween: 15,
     navigation: {
       nextEl: '.slider-btn-next',
       prevEl: '.slider-btn-prev',

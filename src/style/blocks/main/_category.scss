@@ -1,6 +1,10 @@
 .category {
   position: relative;
-  z-index: 1;
+  margin-bottom: 100px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &__descr {
     margin-bottom: 30px;

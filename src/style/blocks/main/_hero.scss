@@ -1,12 +1,8 @@
 .hero {
-  padding-top: 240px;
+  padding-top: 220px;
 
   @include media-min ($md) {
-    padding-top: 150px;
-  }
-
-  @include media-min ($xl) {
-    padding-top: 200px;
+    padding-top: 130px;
   }
 
   &__content {
@@ -71,7 +67,12 @@
     margin-top: 230px;
     padding-bottom: 50px;
 
+    @include media-min ($md) {
+      margin-top: 50px;
+    }
+
     @include media-min ($xl) {
+      margin-top: 200px;
       padding-bottom: 150px;
     }
   }
