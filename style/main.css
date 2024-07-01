@@ -1928,6 +1928,8 @@ strong {
 }
 .benefits__top {
   position: relative;
+
+  margin-bottom: 50px;
 }
 .benefits__title {
   position: sticky;
