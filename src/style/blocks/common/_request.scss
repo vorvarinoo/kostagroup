@@ -1,6 +1,6 @@
 .request {
   background-image: url('../img/img-bg_request-form.png');
-  border-image: fill 0 linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  border-image: fill 0 linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
   background-repeat: no-repeat;
   background-size: auto 100%;
   padding: 70px 15px 50px;
@@ -36,11 +36,11 @@
   }
 
   &__form {
-    --border: var(--white);
     --checbox-ticket: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.570312 2.82617L3.82957 6.26367L8.57031 1.26367' stroke='white' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
     --main-text: var(--white);
     --main-bg: transparent;
     --border: rgba(255, 255, 255, 0.5);
+
     display: flex;
     flex-direction: column;
     gap: 30px;

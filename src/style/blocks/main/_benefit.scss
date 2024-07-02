@@ -4,10 +4,10 @@
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center;
-  border-image: fill 0 linear-gradient(225deg, rgba(0, 0, 0, 0.2) 0%, #000 100%);
+  border-image: fill 0 linear-gradient(225deg, rgba(0, 0, 0, 0.2) 0%, #000000 100%);
 
   @include media-min ($md) {
-    padding: 50px 50px;
+    padding: 50px;
     min-height: 300px;
   }
 

@@ -1,0 +1,36 @@
+.page-text {
+  padding: 50px 0 100px;
+
+  @include media-min ($md) {
+    padding: 100px 0 200px;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 200px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    overflow-wrap: break-word;
+
+    @include media-min ($md) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 13px 0;
+
+
+    @include media-min ($md) {
+      padding: 17px 0;
+      margin-top: 100px;
+    }
+
+    @include media-min ($xl) {
+      padding: 27px 0;
+    }
+  }
+}

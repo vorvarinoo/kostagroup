@@ -14,7 +14,7 @@
     &::after {
       content: '';
       position: absolute;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 20.89%, #fff 100%);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 20.89%, #ffffff 100%);
       top: 0;
       bottom: 0;
       left: 0;
@@ -25,7 +25,7 @@
       content: '';
       position: absolute;
       z-index: 2;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 55.89%, #fff 100%);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 55.89%, #ffffff 100%);
       bottom: 0;
       left: 0;
       height: 45%;
@@ -44,7 +44,7 @@
     &::after {
       content: '';
       position: absolute;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
       opacity: 0.8;
       bottom: 0;
       left: 0;

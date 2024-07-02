@@ -19,7 +19,7 @@
     max-width: 350px;
   }
 
-  &:before,
+  &::before,
   &::after {
     content: '';
     position: absolute;
@@ -34,7 +34,7 @@
     }
   }
 
-  &:before {
+  &::before {
     content: counter(num);
     counter-increment: num;
     z-index: 1;
@@ -58,12 +58,12 @@
     }
   }
 
-  &:after {
+  &::after {
     background-image: var(--img-bg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-image: fill 0 linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    border-image: fill 0 linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
 
     @include media-min ($xl) {
       opacity: 0;
@@ -72,12 +72,12 @@
 
   &:hover {
 
-    &:before {
+    &::before {
       background-color: var(--white);
       border: none;
     }
 
-    &:after {
+    &::after {
       opacity: 1;
     }
   }

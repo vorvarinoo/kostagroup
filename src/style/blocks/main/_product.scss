@@ -84,7 +84,7 @@
       display: inline-block;
       align-self: flex-start;
 
-      &:after {
+      &::after {
         content: '';
         position: absolute;
         z-index: 2;
