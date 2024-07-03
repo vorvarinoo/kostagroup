@@ -1,8 +1,11 @@
 .page-text {
-  padding: 50px 0 100px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  line-height: 1.5;
 
   @include media-min ($md) {
-    padding: 100px 0 200px;
+    padding-top: 100px;
+    padding-bottom: 200px;
   }
 
   @include media-min ($xl) {

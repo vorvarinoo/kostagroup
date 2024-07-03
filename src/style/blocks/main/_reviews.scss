@@ -23,6 +23,10 @@
     bottom: 40px;
     right: 0;
 
+    & > * {
+      background-color: var(--black-10);
+    }
+
     @include media-min ($md) {
       right: auto;
       bottom: auto;

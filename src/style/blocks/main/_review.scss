@@ -4,6 +4,7 @@
   @include media-min ($md) {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     gap: 35px;
     padding-left: 120px;
   }

@@ -15,6 +15,7 @@
 
       padding-right: 35px;
       border-color: var(--red-50);
+      cursor: pointer;
 
       & .product__title {
         font-size: 25px;
@@ -50,6 +51,7 @@
     padding-right: 35px;
     border-color: var(--red-50);
     flex-direction: column;
+    cursor: auto;
 
     @include media-min ($md) {
       flex-direction: row;
@@ -155,6 +157,10 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px dashed var(--black-30);
+  }
+
+  &__item-value {
+    text-align: end;
   }
 
   &__btn {
